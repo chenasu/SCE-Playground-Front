@@ -1,1 +1,1 @@
-# SCE-Playground-Front
+Here Will be explanation about how to run the project.
