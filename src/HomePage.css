@@ -1,0 +1,73 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  font-family: "Cambria Math", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.home-title {
+  font-family: "Cambria Math", sans-serif;
+  font-size: 3em;
+  color: #2c3e50;
+}
+
+.home-text {
+  font-family: "Cambria Math", sans-serif;
+  font-size: 1.4em;
+  color: #4d4d4d;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.home-button {
+  padding: 14px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: black; /* צבע הרקע לכפתור */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.home-button:hover {
+  background-color: #71727b; /* צבע ריחוף */
+  transform: scale(1.05);
+}
+
+.home-button:active {
+  background-color: #464c4e; /* צבע לחיצה */
+}
+
+.footer {
+  margin-top: auto;
+  font-size: 0.9em;
+  width: 100%;
+  text-align: center;
+}
+
+.footer a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #1e6a93;
+}
