@@ -118,10 +118,11 @@ function App() {
             </div>
           }
         />
-        <Route path="/homepage" element={<><HomePage /><HamburgerMenu /></>} />
-        <Route path="/leads" element={<><Leads /><HamburgerMenu /></>} /> 
-        <Route path="/products" element={<><Products /><HamburgerMenu /></>} /> 
+        <Route path="/homepage" element={<><HomePage /></>} />
+        <Route path="/leads" element={<><Leads /></>} /> 
+        <Route path="/products" element={<><Products /></>} /> 
       </Routes>
+      <HamburgerMenu />
     </>
   );
 }  

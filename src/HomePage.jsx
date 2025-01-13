@@ -17,23 +17,18 @@ function HomePage() {
 
   return (
     <>
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <div className="home-container">
-              <h1 className="home-title">Welcome to the Home Page</h1>
-              <p className="home-text">You have successfully logged in!</p>
-              <div className="button-container">
-                <button className="home-button" onClick={handleNavigateToLeads}>Customer Leads</button>
-                <button className="home-button" onClick={handleNavigateToProducts}>Product Catalogs</button>
-              </div>
-            </div>
-          }
-        />
-        <Route path="/leads" element={<><Leads /><HamburgerMenu /></>} />
-        <Route path='/products' element={<><Products /><HamburgerMenu /></>} />
-      </Routes>
+      <div className="home-container">
+        <h1 className="home-title">Welcome to the Home Page</h1>
+        <p className="home-text">You have successfully logged in!</p>
+        <div className="button-container">
+          <button className="home-button" onClick={handleNavigateToLeads}>
+            Customer Leads
+          </button>
+          <button className="home-button" onClick={handleNavigateToProducts}>
+            Product Catalogs
+          </button>
+        </div>
+      </div>
     </>
   );
 }
