@@ -16,6 +16,9 @@ function HamburgerMenu() {
                 <button className="close-btn" onClick={toggleMenu}>×</button>
                 <ul>
                     <li>
+                        <Link to="/homepage" onClick={toggleMenu}>Home Page</Link>
+                    </li>
+                    <li>
                         <Link to="/products" onClick={toggleMenu}>Products</Link>
                     </li>
                     <li>
