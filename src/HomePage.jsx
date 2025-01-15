@@ -14,6 +14,9 @@ function HomePage() {
   const handleNavigateToProducts = () => {
     navigate('/products');
   };
+  const handleSignOut = () => {
+    navigate('/'); 
+  };
 
   return (
     <>
@@ -28,6 +31,11 @@ function HomePage() {
             Product Catalogs
           </button>
         </div>
+      </div>
+      <div className="footer">
+        <button className="signout-button" onClick={handleSignOut}>
+          Sign Out
+        </button>
       </div>
     </>
   );

@@ -19,6 +19,34 @@ body, html {
   font-size: 3em;
   color: #2c3e50;
 }
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.signout-button {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #d9534f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.signout-button:hover {
+  background-color: #c9302c;
+  transform: scale(1.05);
+}
+
+.signout-button:active {
+  background-color: #ac2925;
+}
 
 .home-text {
   font-family: "Cambria Math", sans-serif;
