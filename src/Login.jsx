@@ -1,10 +1,12 @@
 import { useState } from 'react';
-import './Login.css';  // ייבוא קובץ ה-CSS
+import { useNavigate, Routes, Route } from 'react-router-dom';
+import './Login.css'; 
 
-function Login({ onLoginSuccess }) {
+function Login( ) {
   const [username, setUsername] = useState('');
   const [pass, setPass] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleUsernameChange = (e) => {
     const input = e.target.value;
@@ -22,26 +24,8 @@ function Login({ onLoginSuccess }) {
     }
   };
 
-  const handleSubmit = async () => {
-    setError('');
-    try {
-      const response = await fetch("http://localhost:3000/signup", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password: pass }),
-      });
-
-      const data = await response.json();
-      if (response.status === 201) {
-        setError('');
-        onLoginSuccess();  // callback function passed as prop to notify App about success
-      } else {
-        setError(data.message);
-      }
-    } catch (error) {
-      console.error("Error during signup:", error);
-      setError("The username already exists in the system.");
-    }
+  const onLoginSuccess = () => {
+    navigate("/homepage");
   };
 
   const handleLogIn = async () => {
@@ -69,7 +53,7 @@ function Login({ onLoginSuccess }) {
   return (
     <div className="login-container">
       <div className="login-form">
-        <h2>Login</h2>
+        <h2>Welcome</h2>
         <div className="input-group">
           <label>User Name</label>
           <input 
@@ -88,7 +72,6 @@ function Login({ onLoginSuccess }) {
         </div>
         <div className="button-group">
           <button onClick={handleLogIn}>Login</button>
-          <button onClick={handleSubmit}>Sign Up</button>  {/* Add Sign Up button here */}
         </div>
         {error && <p className="error">{error}</p>}
       </div>
