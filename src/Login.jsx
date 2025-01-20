@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Routes, Route } from 'react-router-dom';
 import './Login.css'; 
+import Cookies from 'js-cookie';
 
 function Login( ) {
   const [username, setUsername] = useState('');
@@ -39,6 +40,7 @@ function Login( ) {
 
       const data = await response.json();
       if (response.status === 200) {
+        Cookies.set('authToken', data.token, { expires: 30 }); 
         setError('');
         onLoginSuccess();  // callback function passed as prop to notify App about success
       } else {

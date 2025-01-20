@@ -1,11 +1,17 @@
+import React, { useEffect } from 'react';
 import './HomePage.css';
-import { useNavigate, Routes, Route } from 'react-router-dom';
-import Leads from './Leads';
-import Products from './Products';
-import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 function HomePage() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = Cookies.get('authToken');
+    if (!token) {
+      navigate('/'); 
+    }
+  }, [navigate]);
 
   const handleNavigateToLeads = () => {
     navigate('/leads');
@@ -14,8 +20,10 @@ function HomePage() {
   const handleNavigateToProducts = () => {
     navigate('/products');
   };
+
   const handleSignOut = () => {
-    navigate('/'); 
+    Cookies.remove('authToken');
+    navigate('/');
   };
 
   return (
@@ -40,5 +48,6 @@ function HomePage() {
     </>
   );
 }
+
 
 export default HomePage;
