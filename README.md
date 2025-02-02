@@ -13,10 +13,12 @@ First, clone both the frontend and backend repositories to your local machine.
 
 Clone the frontend repository
 **Frontend Repository Link:**
+
 git clone https://github.com/chenasu/SCE-Playground-Front.git
 
 Clone the backend repository
 **Backend Repository Link**
+
 git clone https://github.com/chenasu/SCE-Playground-Backend.git
 ## **2. Set Up the Frontend**
 **npm install**
