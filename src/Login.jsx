@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate, Routes, Route } from 'react-router-dom';
-import './Login.css'; 
 import Cookies from 'js-cookie';
 
 function Login( ) {

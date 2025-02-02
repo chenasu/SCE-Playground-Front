@@ -1,0 +1,26 @@
+.user-info {
+    font-family: "Cambria Math", sans-serif; 
+    font-weight: normal; 
+    text-align: left; 
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;  
+    align-items: center; 
+    gap: 2rem; 
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .user-info label {
+    font-weight: normal; 
+    font-size: 1rem;
+  }
+  
+  .user-info p {
+    font-size: 1.1rem; 
+    margin: 0;
+  }

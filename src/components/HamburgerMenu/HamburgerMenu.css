@@ -3,6 +3,9 @@
     top: 10px;
     right: 10px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
 }
 
 .menu-button {
@@ -10,7 +13,7 @@
     border: none;
     background: none;
     cursor: pointer;
-    outline: none; /* הורד את הקו המתאר */
+    outline: none; 
 }
 
 .menu-links {
@@ -22,7 +25,7 @@
     width: 200px;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(239, 238, 238, 0.2); /* תיקן את הצל */
+    box-shadow: 0 4px 8px rgba(239, 238, 238, 0.2); 
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     transform: translateY(-20px);
@@ -42,9 +45,9 @@
     border: none;
     cursor: pointer;
     position: absolute;
-    top: -10px; /* הזז את האיקס למעלה */
-    left: 10px; /* שמור את האיקס שמאלה */
-    outline: none; /* הורד את הקו המתאר */
+    top: -10px; 
+    left: 10px; 
+    outline: none; 
 }
 
 .menu-links ul {
@@ -64,15 +67,16 @@
     padding: 8px 0;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    outline: none; /* הורד את הקו המתאר */
+    outline: none;
 }
 
 .menu-links li a:focus {
-    outline: none; /* הורד את הקו המתאר */
-    font-weight: bold; /* להדגשת הטקסט */
+    outline: none; 
+    font-weight: bold;
 }
 
 .menu-button:focus,
 .close-btn:focus {
-    outline: none; /* הורד את הקו המתאר מההמבורגר ומהאיקס */
+    outline: none; 
 }
+
