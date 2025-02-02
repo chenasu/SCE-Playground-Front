@@ -1,4 +1,4 @@
-###**Welcome to SCE-PLAYGROUND 🎮**
+##**Welcome to SCE-PLAYGROUND 🎮**
 SCE-PLAYGROUND is a  project built with React for the frontend and Node.js for the backend. It provides an interactive and dynamic environment where users can explore various features, sign up, and log in. 
 
 Both the frontend and backend are essential parts of this application and need to be running simultaneously for everything to work properly.
