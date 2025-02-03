@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Routes, Route } from 'react-router-dom';
 import './SignUp.css';
+import Cookies from 'js-cookie';
 
 function SignUp() {
   const [username, setUsername] = useState('');
@@ -57,6 +58,7 @@ function SignUp() {
 
       const data = await response.json();
       if (response.status === 201) {
+        Cookies.set('authToken', data.token, { expires: 30 }); 
         setError('');
         onSignUpSuccess();
       } else {
